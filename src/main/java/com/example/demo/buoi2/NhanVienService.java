@@ -15,7 +15,7 @@ public class NhanVienService {
     public void fakeData(){
         IntStream.rangeClosed(1,50)
                 .mapToObj(o-> NhanVien.builder().ten("name "+o).tuoi(new Random().nextInt(50)).luong(new Random().nextInt(5000)).build())
-                .forEach(list::add);
+                .forEach(s->list.add(s));
     }
 
     public  List<NhanVien> getAll(){
