@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var sv = {
+        "name": "Nguyén Van Téo",
+
+        "gender": true,
+        "mark": 9.0,
+        "contact": {
+            "email": "hung@gmail.com",
+            "phone": "034221469",
+        },
+        "subject": ["web205", "com108"],
+    }
+    //    xuất đối tượng
+    console.log(sv)
+    // truy xuất đối tượng
+    console.log(sv.name)
+    // duyệt đối tượng theo key
+    for(var key in sv){
+        console.log(key,sv[key])
+    }
+    // chuyển đổi đối tượng json sang chuỗi
+    var text=JSON.stringify(sv);
+    console.log(text);
+    // chuyển đổi chuỗi sang đối tượng json
+    var obj=JSON.parse(text);
+    console.log(obj,obj.name);
+</script>
+</body>
+</html>
